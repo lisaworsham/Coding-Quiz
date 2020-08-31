@@ -24,7 +24,9 @@ Once the quiz is done, the function showFinalScore triggers and allows for input
 ## Review
 
 ```
-This was the hardest homework for me by far. I wasn't able to complete it unfortunatly. I wasn't able to get my scores to show and the styling is basic bootstrap (nothing fancy). I struggle alot and didn't allot myself enough time to finish it.   
+This was the hardest homework for me by far. I wasn't able to complete it unfortunatly. I wasn't able to get my scores to show and the styling is basic bootstrap (nothing fancy). I struggle alot and didn't allot myself enough time to finish it.  
+
+UPDATE: I went ahead and finished this quiz to where it was finally functional. I'm working on styling and will update the repository once I'm satified with it. 
 
 ```
 <img src="Capture.PNG">

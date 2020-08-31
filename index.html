@@ -4,76 +4,65 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Simple Coding Quiz</title>
+    <title>Simple Western Coding Quiz</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    
     <!-- my CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="Style/style.css">
 </head>
-
-<body>
-    <!-- Header -->
-    <nav class="header">
-        <div class="card-body justify-content-end">
-            <a type="button" id="score" onclick="showHighScores()" href="scores.html">View High Scores</a>
-            <a id="timer"></a>
-        </div>
-    </nav>
-
-    <main class="container">
+<!-- Header -->
+<div id="header">
+    <div id="static">
+        <button id="scores" href="">View High Scores</button>
+        <div id="timer"><p>Time Left: <span id="time">0</span></p></div>
+    </div>
+</div>
+<div id="wrapper">
     <!-- Instructions (should disappear when start quiz button is clicked) -->
-        <div id="start">
-            <h1 id="title">Simple Coding Quiz</h1>
-            <p id="instructions">This is a simple coding quiz to see how you well you know the coding concepts. This is a timed quiz, so the faster you go, the higher your score. Get a question wrong and you'll knock the score down by 10 seconds. Go as fast as you can without messing up! Ready... set... GO</p>
-            <div id="button">   
-                <button id="submitBtn" class ="btn active" type="button">Start Quiz</button>
-            </div>
+    <section id="intro">
+        <h1>Simple Coding Quiz</h1>
+        <p>This is a simple Western Movie quiz to see how you well you know the Western Movie genre. This is a timed quiz, so the faster you go, the higher your score. Get a question wrong and you'll knock the score down by 10 seconds. Go as fast as you can without messing up! Ready... set... GO</p>
+        <button class="start">Start Quiz</button>
+    </section>
+    <!-- Quiz (appears when start quiz button is clicked) -->
+    <section id="quizContainer" class="hide">
+        <p id="title"></p>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <div id="scoreIndicator" class="invisible">
+            <p>&nbsp;</p>
         </div>
+    </section>
 
-        <!-- Quiz (appears when start quiz button is clicked) -->
-        <div id="quizQuestions">
-            <h2 id="questionHeader"></h2>
-            <ul>
-                <li><button type="button" class="btn questionBtn" id="one"></button></li>
-                <li><button type="button" class="btn questionBtn" id="two"></button></li>
-                <li><button type="button" class="btn questionBtn" id="three"></button></li>
-                <li><button type="button" class="btn questionBtn" id="four"></button></li>
-            </ul>
-                
-            <!--Response -->
-            <div id="response"></div>
+    <section id="finish" class="hide">
+        <h1>All Done</h1>
+        <p>Your final score is&nbsp;<span id="score"></span></p>
+        <div id="records">
+            <p>Enter initials: </p><input id="initials" type="text">
+            <button>Submit</button>
         </div>
-
-        <div id="finalScore">
-            <h2 id="done">You're Done!</h2>
-            <div id="yourFinalScore"></div>
-            <form class="row">
-                <div class="form-inline">
-                    <label for="text" id="initials" class="col col-form-label input-group"></label>
-                    <div> 
-                    <input type="text" class="col form-control" id="initialInput">
-                    <button id="initialBtn" class="btn" type="button"></button></a>
-                </div>
-            </form>
+        <div id="errorIndicator" class="invisible">
+            <p>&nbsp;</p>
         </div>
+    </section>
 
-       <div id="highScoreBtn">
-            <h2 id="highScores">Highscores</h2>
-            <p id="highScoreList"></p>
-           <div class="col-sm-12 text-center">
-               <button id="startOver" class ="btn" type="button">Start Over</button></a>
-               <button id="clearHighScore" class ="btn" value="reset-form" type="button">Nuke High Scores</button>
-           </div>
-       </div>
+    <section id="highScores" class="hide">
+        <h1>High Scores</h1>
+        <div>
 
-    </main>
-
+        </div>
+        <button id="reset">Back</button>
+        <button id="clearScores">Nuke Highscores</button>
+    </section>
+</div>
+<body>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="javascript.js"></script>
+    <script src="Script/script.js"></script>
 </body>
 </html>
